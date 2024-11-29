@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Alarm Clock</title>
+    <link rel="stylesheet" href="Alarm.css">
+</head>
+<body>
+    <div class="clock-container">
+        <div class="time" id="currentTime">00:00:00</div>
+
+        <div class="alarm-inputs">
+            <input type="number" id="hour" placeholder="HH" min="0" max="23">
+            <input type="number" id="minute" placeholder="MM" min="0" max="59">
+            <input type="number" id="second" placeholder="SS" min="0" max="59">
+        </div>
+
+        <button onclick="setAlarm()">Set Alarm</button>
+        <input type="file" id="soundUpload" accept="audio/*">
+        <button onclick="uploadSound()">Upload Sound</button>
+        <div class="message" id="alarmMessage"></div>
+
+        <div class="alarm-list" id="alarmList">
+            <h3>Set Alarms:</h3>
+        </div>
+    </div>
+
+    <!-- Alarm Sound -->
+    <audio id="alarmSound" src="default-alarm.mp3" preload="auto"></audio>
+
+    <script src="Alarm.js"></script>
+    
+</body>
+</html>

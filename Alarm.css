@@ -1,0 +1,112 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+}
+
+.clock-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.time {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.alarm-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    text-align: center;
+}
+
+input[type="number"] {
+    width: 60px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6584;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4a6b;
+}
+
+.message {
+    background-color: #ff4a6b;
+
+    font-size: 1.2rem;
+    color: #ffddc1;
+    margin-top: 20px;
+}
+
+.alarm-list {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #ffd700;
+}
+
+.alarm-item {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-btn {
+    background-color: #ff4a6b;
+    padding: 5px 10px;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.remove-btn:hover {
+    background-color: #ff6584;
+}
+
+@keyframes ring {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.alarm-active {
+    animation: ring 0.5s infinite;
+}
